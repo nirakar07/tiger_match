@@ -35,13 +35,13 @@ router.get("/", function(req, res){
             } else {
                 var bool = false;
             //     Profile.findById().exec(function (err, story) {
-            //   if (err) return console.log(err); 
+            //   if (err) return console.log(err);
             //     if (story === null) bool = true;
             console.log(req.user);
               res.render("profiles/index",{profiles: allProfiles, page: 'profiles', user: req.user});
                 // });
             }
-        
+
          }
       });
   }
@@ -60,17 +60,11 @@ router.post("/", isLoggedIn, function(req, res){
   var q5 = req.body.q5;
   var q6 = req.body.q6;
   var q7 = req.body.q7;
-  var q8 = req.body.q8;
-  var q9 = req.body.q9;
-  var q10 = req.body.q10;
-  var q11 = req.body.q11;
-  var q12 = req.body.q12;
-  var q13 = req.body.q13;
   var author = req.user.username
-  
- 
 
-    var newProfile = {q1: q1, q2: q2, q3: q3, q4: q4, q5: q5, q6: q6, q7: q7, q8: q8, q9: q9, q10: q10, q11: q11, q12: q12, author: author, q13: q13}
+
+
+    var newProfile = {q1: q1, q2: q2, q3: q3, q4: q4, q5: q5, q6: q6, q7: q, author: author}
     // Create a new Profile and save to DB
     Profile.create(newProfile, function(err, newlyCreated){
         if(err){
@@ -86,7 +80,7 @@ router.post("/", isLoggedIn, function(req, res){
 
 //NEW - show form to create new profile
 router.get("/new", isLoggedIn, function(req, res){
-   res.render("profiles/new"); 
+   res.render("profiles/new");
 });
 
 
