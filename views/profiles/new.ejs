@@ -1,0 +1,84 @@
+<% include ../partials/header %>
+
+<div class = "container">
+    <div class="row">
+        <h1 style="text-align: center">Your Preferences</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/profiles" method="POST">
+
+                             <div class="row">
+          <div class = "col-sm-12">                                       
+        <label for="q1">Your Gender</label>
+        <div class="input-group"> 
+            <input placeholder= "Select an option from dropdown" name = "q1" type="TextBox" ID="datebox0" Class="form-control"></input>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+             
+                <ul  id="demolist0" class="dropdown-menu">
+                    <li><a href="#">Male</a></li>
+                    <li><a href="#">Female</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+              
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class = "col-sm-12">                                       
+        <label for="q2">Which Gender Are You Interested In Meeting?</label>
+          <div class="input-group"> 
+            <input placeholder= "Select an option from dropdown" name = "q2" type="TextBox" ID="datebox1" Class="form-control"></input>
+             <div class="input-group-btn">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                <li><a href="#">Male</a></li>
+                    <li><a href="#">Female</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                
+
+            
+<div class="form-group">
+                    <label for="q3">Your Class Year</label>
+                    <input class="form-control" type="number" name="q3" id="year" placeholder="2022" step="1" min="2019" max = "2022" required>
+</div>
+
+ <div class="form-group">
+                    <label for="q4">Major</label>
+                    <input class="form-control" type="text" name="q4" id="year" placeholder="Memology" required>
+</div>
+
+
+ <div class="form-group">
+                    <label for="q5">Features of an ideal partner</label>
+                    <input class="form-control" type="text" name="q5" id="year" required>
+</div>
+
+ <div class="form-group">
+                    <label for="q6">Ideal first date</label>
+                    <input class="form-control" type="text" name="q6" id="q9" required>
+</div>
+
+
+ <div class="form-group">
+                    <label for="q7">The way to win me over is</label>
+                    <input class="form-control" type="text" name="q7" id="q9" required>
+</div>
+
+
+          
+<div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+       
+        </div>
+    </div>
+<% include ../partials/footer %>

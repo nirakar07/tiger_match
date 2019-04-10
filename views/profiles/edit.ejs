@@ -1,0 +1,72 @@
+<% include ../partials/header %>
+<div class = "container">
+    <div class="row">
+        <h1 style="text-align: center">Create a New DineMe Event</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/profiles" method="POST">
+                <div class="form-group">
+                    <label for="name">Date and Time for Dinner</label>
+                   <input type="date" name = "date" min="2019-03-31" max="2019-04-10" step="1">
+                </div>
+            
+<div class="form-group">
+                    <label for="year">Class Year</label>
+                    <input class="form-control" type="number" name="year" id="year" placeholder="2022" step="1" min="2019" max = "2022" required>
+</div>
+
+ <div class="row">
+    <div class = "col-sm-12">                                       
+        <label for="q1">I'm convinced that</label>
+          <div class="input-group"> 
+            <input name = "q1" type="TextBox" ID="datebox1" Class="form-control"></input>
+             <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Elon Musk is from the future</a>
+                        <a href="#">The Earth is flat</a>
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
+ <div class="row">
+    <div class = "col-sm-12">                                       
+        <label for="q2">Believe it or not I</label>
+          <div class="input-group"> 
+            <input name = "q2" type="TextBox" ID="datebox1" Class="form-control"></input>
+             <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Hate tofu</a>
+                        <a href="#">Think Forbes is the best res college</a>
+                        <a href="#">Post tiger confessions about myself</a>
+                        <a href="#">Didn't get into Stanford</a>
+                        <a href="#">Go to NYC on every break</a>
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+ <div class="row">
+    <div class = "col-sm-12">                                       
+        <label for="q3">Dream Dinner Guest</label>
+          <div class="input-group"> 
+            <input name = "q3" type="TextBox" ID="datebox1" Class="form-control"></input>
+             <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                        <a href="#">President Eisgruber</a>
+                        <a href="#">President Eisgruber :) </a>
+                        <a href="#">President Eisgruber :))</a>
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+       
+        </div>
+    </div>
+<% include ../partials/footer %>
