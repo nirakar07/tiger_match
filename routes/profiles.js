@@ -64,7 +64,7 @@ router.post("/", isLoggedIn, function(req, res){
 
 
 
-    var newProfile = {q1: q1, q2: q2, q3: q3, q4: q4, q5: q5, q6: q6, q7: q, author: author}
+    var newProfile = {q1: q1, q2: q2, q3: q3, q4: q4, q5: q5, q6: q6, q7: q7, author: author}
     // Create a new Profile and save to DB
     Profile.create(newProfile, function(err, newlyCreated){
         if(err){
