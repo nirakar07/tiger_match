@@ -5,18 +5,14 @@
              <h1>Welcome To TigerMatch!</h1>
              <p>Find Your Perfect Match Now!</p>
              <p> <% var bool = false, profileConsider%>
-
-             <% profiles.forEach(function(profile){ %>
+               <% profiles.forEach(function(profile){ %>
                 <% if (user && profile.author.username === user.username) { %>
                            <% bool = true; %>
                            <% profileConsider = profile;%>
                <% } %>
            <%  }); %>
-
-
-                <a class="btn btn-primary btn-lg" href="/profiles/new">Request for a Match</a>
-
-             </p>
+              <a class="btn btn-primary btn-lg" href="/profiles/new">Request for a Match</a>
+              </p>
               <p>
 
              </p>
