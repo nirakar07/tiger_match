@@ -16,10 +16,10 @@ var express     = require("express"),
 // require('dotenv').load();
 
 //requiring routes
-var 
+var
     profileRoutes = require("./routes/profiles"),
     indexRoutes      = require("./routes/index");
-    
+
 // assign mongoose promise library and connect to database
 // mongoose.Promise = global.Promise;
 
@@ -29,16 +29,16 @@ var
 //       .then(() => console.log(`Database connected`))
 //       .catch(err => console.log(`Database connection error: ${err.message}`));
 
-mongoose.connect("mongodb+srv://nirakar07:Narayannir123@dineme-gdts2.mongodb.net/test?retryWrites=true");
+mongoose.connect("mongodb+srv://nirakar07:Narayannir123@tigercluster-ge5an.mongodb.net/tigermatch?retryWrites=true");
 
-   
+
 var http = require('http');
 var enforce = require('express-sslify');
- 
- 
+
+
 // Use enforce.HTTPS({ trustProtoHeader: true }) in case you are behind
 // a load balancer (e.g. Heroku). See further comments below
-app.use(enforce.HTTPS({ trustProtoHeader: true })) 
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
 });
