@@ -43,7 +43,7 @@ router.post("/login", passport.authenticate("local",
         successRedirect: "/profiles/new",
         failureRedirect: "/login",
         failureFlash: true,
-        successFlash: 'Welcome to DineMe!'
+        successFlash: 'Welcome to TigerMatch!'
     }), function(req, res){
 });
 
