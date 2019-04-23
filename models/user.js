@@ -6,7 +6,7 @@ var UserSchema = new mongoose.Schema({
     password: String,
     isAdmin: {type: Boolean, default: false},
     verified: {type: Boolean, default: false},
-    hash: Number // Only catches first 64 bits of MD5 hash
+    verifyHash: Number // Only catches first 64 bits of MD5 hash
 });
     
 
