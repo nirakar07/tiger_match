@@ -2,7 +2,7 @@ var express = require("express");
 var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
-//var randomstring = require("randomstring");
+var randomstring = require("randomstring");
 const Profile = require("../models/profile");
 
 //root route
@@ -17,7 +17,7 @@ router.get("/register", function(req, res){
 
 //handle sign up logic
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username, verifyHash: "ffff" });
+    var newUser = new User({username: req.body.username, verifyHash: randomstring.generate(16) });
     // if(req.body.adminCode === process.env.ADMIN_CODE) {
     //   newUser.isAdmin = true;
     // }
