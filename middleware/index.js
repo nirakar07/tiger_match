@@ -13,7 +13,7 @@ module.exports = {
   isLoggedIn: function(req, res, next){
       if(req.isAuthenticated()){
           return next();
-      } else if (req.user.verified != true) { // TODO: this should be if user field verified is true
+      } else if (req.user.verified !== true) { // TODO: this should be if user field verified is true
         req.flash('error', 'Your account is currently unverified!');
         res.redirect('/verify');
       }
