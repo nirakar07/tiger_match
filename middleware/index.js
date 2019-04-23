@@ -17,13 +17,11 @@ module.exports = {
            return next();
       }
        req.flash('error', 'Your account has not been verified!');
-     
-    } //else if (req.user.verified !== true) { // TODO: this should be if user field verified is true
-         //req.flash('error', 'Your account is currently unverified!');
-         //res.redirect('/verify');
-       //}
-       req.flash('error', 'You must be signed in to do that!');
-      res.redirect('/login');
+       res.redirect('/verify');     
+      }      
+    }
+     req.flash('error', 'You must be signed in to do that!');
+     res.redirect('/login');
   },
   checkUserProfile: function(req, res, next){
     Profile.findById(req.params.id, function(err, foundEvent){
