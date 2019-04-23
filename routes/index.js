@@ -17,7 +17,7 @@ router.get("/register", function(req, res){
 
 //handle sign up logic
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username, verifyHash: randomstring.generate(16) });
+    var newUser = new User({username: req.body.username, verifyHash: "ffff" });
     // if(req.body.adminCode === process.env.ADMIN_CODE) {
     //   newUser.isAdmin = true;
     // }
