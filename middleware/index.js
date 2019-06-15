@@ -17,7 +17,7 @@ module.exports = {
            return next();
       }
        req.flash('error', 'Your account has not been verified!');
-       res.redirect('/login');           
+       res.redirect('/verify');           
     }
      req.flash('error', 'You must be signed in to do that!');
      res.redirect('/login');
