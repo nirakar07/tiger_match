@@ -38,6 +38,11 @@ router.get("/login", function(req, res){
    res.render("login", {page: 'login'});
 });
 
+//show verify form
+router.get("/verify", function(req, res){
+   res.render("verify", {page: 'verify'});
+});
+
 //handling login logic
 router.post("/login", passport.authenticate("local",
     {
