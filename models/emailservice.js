@@ -10,7 +10,7 @@ let transporter = nodemailer.createTransport({
 
 exports.sendVerificationEmail = function(netid) {
     
-    let info = await transporter.sendMail({
+    let info = transporter.sendMail({
         from: '"TigerMatch" <tigermatch19@gmail.com>', // sender address
         to: netid + "@princeton.edu", // list of receivers
         subject: "Test email", // Subject line
