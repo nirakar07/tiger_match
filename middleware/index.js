@@ -18,9 +18,10 @@ module.exports = {
       }
        req.flash('error', 'Your account has not been verified!');
        res.redirect('/verify');           
-    }
+    } else {
      req.flash('error', 'You must be signed in to do that!');
      res.redirect('/login');
+    }
   },
   checkUserProfile: function(req, res, next){
     Profile.findById(req.params.id, function(err, foundEvent){
