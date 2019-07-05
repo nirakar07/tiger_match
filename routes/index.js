@@ -51,6 +51,7 @@ router.post("/verify", function(req, res){
     else {
         EmailService.sendVerificationEmail(req.user.username);
     }
+    res.redirect("/verify");
 });
 
 //handling login logic
