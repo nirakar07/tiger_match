@@ -45,7 +45,7 @@ router.get("/verify", function(req, res){
 });
 
 router.post("/verify", function(req, res){
-   EmailService.sendVerficiationEmail(req.user.username);
+   EmailService.sendVerificiationEmail(req.user.username);
 });
 
 //handling login logic
