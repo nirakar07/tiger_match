@@ -45,8 +45,12 @@ router.get("/verify", function(req, res){
 });
 
 router.post("/verify", function(req, res){
-    console.log(req.user);
-   //EmailService.sendVerificiationEmail(req.user.username);
+    if (typeof req.user === 'undefined') {
+        req.flash('error', 'You are not signed in!');
+    }
+    else {
+        EmailService.sendVerificiationEmail(req.user.username);
+    }
 });
 
 //handling login logic
