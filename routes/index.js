@@ -4,6 +4,7 @@ var passport = require("passport");
 var User = require("../models/user");
 var randomstring = require("randomstring");
 const Profile = require("../models/profile");
+const EmailService = require("../models/emailservice.js");
 
 //root route
 router.get("/", function(req, res){
@@ -41,6 +42,10 @@ router.get("/login", function(req, res){
 //show verify form
 router.get("/verify", function(req, res){
    res.render("verify", {page: 'verify'});
+});
+
+router.post("/verify", function(req, res){
+   EmailService.sendVerficiationEmail(req.user.username);
 });
 
 //handling login logic
