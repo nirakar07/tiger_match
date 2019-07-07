@@ -42,7 +42,6 @@ router.get("/login", function(req, res){
 //show verify form
 router.get("/verify", function(req, res){
     res.render("verify", {page: 'verify'});
-    console.log(req.query.token);
     if (req.query.token !== "") {
         
         if (req.query.token === req.user.verifyHash) {
