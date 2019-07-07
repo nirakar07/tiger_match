@@ -48,7 +48,7 @@ router.get("/verify", function(req, res){
             console.log("Got a token match");
             req.flash('success', 'You were successfully verfified!');
             res.redirect("/profiles/new");
-            user.save(function(err) {});
+            req.user.save(function(err) {});
             return;
         }
         else {
