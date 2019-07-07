@@ -9,9 +9,7 @@ let transporter = nodemailer.createTransport({
   });
 
 exports.sendVerificationEmail = function(req, res) {
-    
-    console.log(req.user.username);
-    
+        
     let info = transporter.sendMail({
         from: '"TigerMatch" <tigermatch19@gmail.com>',
         to: req.user.username + "@princeton.edu",
