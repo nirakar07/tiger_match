@@ -48,7 +48,6 @@ router.get("/verify", function(req, res){
         if (req.query.token === req.user.verifyHash) {
             req.user.verified = true;
             req.flash('success', 'You were successfully verfified!');
-            res.redirect("/profiles");
         }
         else {
             req.flash('error', 'Incorrect token');
