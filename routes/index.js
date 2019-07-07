@@ -18,7 +18,7 @@ router.get("/register", function(req, res){
 
 //handle sign up logic
 router.post("/register", function(req, res){
-    var newUser = new User({username: req.body.username, verifyHash: randomstring.generate(16) });
+    var newUser = new User({username: req.body.username, verifyHash: randomstring.generate(32) });
     // if(req.body.adminCode === process.env.ADMIN_CODE) {
     //   newUser.isAdmin = true;
     // }
@@ -49,7 +49,8 @@ router.post("/verify", function(req, res){
         req.flash('error', 'You are not signed in!');
     }
     else {
-        EmailService.sendVerificationEmail(req.user.username);
+        console.log(req);
+        //EmailService.sendVerificationEmail(req, res);
     }
     res.redirect("/verify");
 });
