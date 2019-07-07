@@ -49,7 +49,7 @@ router.post("/verify", function(req, res){
         req.flash('error', 'You are not signed in!');
     }
     else {
-        console.log(req);
+        console.log(req.user);
         //EmailService.sendVerificationEmail(req, res);
     }
     res.redirect("/verify");
