@@ -41,17 +41,20 @@ router.get("/login", function(req, res){
 
 //show verify form
 router.get("/verify", function(req, res){
-    res.render("verify", {page: 'verify'});
     if (req.query.token !== "") {
         
         if (req.query.token === req.user.verifyHash) {
             req.user.verified = true;
+            console.log("Got a token match");
             req.flash('success', 'You were successfully verfified!');
+            res.redirect("/profiles");
         }
         else {
             req.flash('error', 'Incorrect token');
         }
-    }   
+    }
+    
+    res.render("verify", {page: 'verify'});
     
 });
 
