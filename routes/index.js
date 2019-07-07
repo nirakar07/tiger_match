@@ -47,7 +47,8 @@ router.get("/verify", function(req, res){
             req.user.verified = true;
             console.log("Got a token match");
             req.flash('success', 'You were successfully verfified!');
-            res.redirect("/profiles");
+            res.redirect("/profiles/new");
+            user.save(function(err) {});
             return;
         }
         else {
@@ -85,6 +86,5 @@ router.get("/logout", function(req, res){
    req.flash("success", "See you later!");
    res.redirect("/login");
 });
-
 
 module.exports = router;
