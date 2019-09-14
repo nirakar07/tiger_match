@@ -29,7 +29,7 @@ var
 //       .then(() => console.log(`Database connected`))
 //       .catch(err => console.log(`Database connection error: ${err.message}`));
 
-mongoose.connect("mongodb+srv://nirakar07:Narayannir123@tigercluster-ge5an.mongodb.net/tigermatch?retryWrites=true");
+mongoose.connect("mongodb+srv://nirakar07:password@tigercluster-ge5an.mongodb.net/tigermatch?retryWrites=true");
 
 
 var http = require('http');
